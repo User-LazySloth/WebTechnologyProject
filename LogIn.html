@@ -11,10 +11,9 @@
         width: 100%;
         height: 50%;
         }
-        .right-half {
-        background-image: url("./lib_login_image.jpg");
-        background-size: full;
-        min-height: 100vh;
+        #LibImage{
+          position: absolute;
+          left: 50%;
         }
     </style>
 </head>
@@ -44,8 +43,7 @@
     </fieldset>
     </div>
     <div class="right-half">
-      <h1>Some Image</h1>
-      <p>Best library ever.</p>
+      <img id="LibImage" src="LibLogInImage.jpg" height="820" width="720">
     </div>
   </div>
 </body>
