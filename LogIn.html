@@ -21,6 +21,7 @@
 <body>
   <div class="container">
     <div class="left-half">
+        <fieldset>
         <h3 id="PLTag">PESU Library</h3>
         <h1 id="LITag">Login</h1>
         <button id="SignInGoogle">
@@ -35,8 +36,13 @@
             Password*<br>
             <input type = "text" name = "pwd" placeholder = "Password" required>
             <br>
-            <input type = "checkbox" name = "rememberme"
+            <input type = "checkbox" name = "rememberme" id = "rem_me">
+            Remember me?
+            <input type = "button" value = "Forgot Password?" id = "for_pwd">
+            <br>
+            <input type = "button" value = "Login" id = "login">
         </form>
+    </fieldset>
     </div>
     <div class="right-half">
       <h1>Right half</h1>
