@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .mySlides {display: none;}
+        img {vertical-align: right;}
+
+        /* Slideshow container */
+        .slideshow-container {
+            height: 100%;
+            width: 50%;
+            position: relative;
+        }
+
+        .left-half{
+            height: 100%;
+            width: 50%;
+            position: relative;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left-half">
+                <fieldset>
+                    <h3 id="PLTag">PESU Library</h3>
+                    <form align="center">
+                        <h1 id="LITag">Login</h1>
+                        <label>PRN/SRN<sup>*</sup></label><br>
+                        <input type = "text" name = "srnprn" placeholder = "SRN/PRN" required><br>
+                        <label>Password<sup>*</sup></label><br>
+                        <input type = "text" name = "pwd" placeholder = "Password" required><br>
+                        <input type = "checkbox" name = "rememberme" id = "rem_me">
+                        <label>Remember me?</label>
+                        <input type = "button" value = "Forgot Password?" id = "for_pwd">
+                        <br>
+                        <input type = "button" value = "Login" id = "login">
+                    </form>
+                </fieldset>
+            </div>
+
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="https://www.w3docs.com/uploads/media/default/0001/03/66cf5094908491e69d8187bcf934050a4800b37f.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://www.w3docs.com/uploads/media/default/0001/03/b7d624354d5fa22e38b0ab1f9b905fb08ccc6a05.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://www.w3docs.com/uploads/media/default/0001/03/5bfad15a7fd24d448a48605baf52655a5bbe5a71.jpeg" style="width:100%">
+                </div>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++)
+                    slides[i].style.display = "none";  
+
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </body>
+</html> 
