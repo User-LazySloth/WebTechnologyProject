@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <style>
+        body, ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            background-image: url("search_background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: #333333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo img {
+            max-height: 40px;
+        }
+        nav ul {
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .actions {
+            display: flex;
+            align-items: center;
+        }
+        .search input {
+            border: none;
+            padding: 10px;
+        }
+        .search button {
+            background-color: #444;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .search button:hover {
+            background-color: #555;
+        }
+        .main-content {
+            margin: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        #search-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #search-button {
+            background-color: #444;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #search-button:hover {
+            background-color: #555;
+        }
+        .search-results {
+            background-color: rgba(245, 245, 245, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .tab-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: #fff;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+        .tab.active {
+            background-color: #555;
+        }
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+        .result-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .result-item img {
+            max-width: px;
+            max-height: 180px;
+            margin-right: 20px;
+        }
+        .result-info {
+            flex: 1;
+        }
+        .result-info h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .result-info p {
+            margin: 5px 0;
+            color: #888;
+        }
+        .add-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #008CBA;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Your Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Guidelines</a></li>
+            </ul>
+        </nav>
+        <div class="actions">
+            <button class="signup">Sign Up</button>
+            <button class="signin">Sign In</button>
+            <button><img src="profilepic.png" alt="Profile"></button>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search">
+            <button id="search-button"><img src="search-icon.png" alt="Search"></button>
+        </div>
+        <div class="search-results">
+            <div class="tab-bar">
+                <div class="tab active" data-tab="books">Books</div>
+                <div class="tab" data-tab="articles">Articles</div>
+                <div class="tab" data-tab="papers">Papers</div>
+            </div>
+            <!-- Sample search results -->
+            <h2>Search Results</h2>
+            <ul class="results-list" id="books-results">
+                <li>
+                    <div class="result-item">
+                        <img src="cover-image-1.jpg" alt="Book Cover">
+                        <button class="add-button">+</button>
+                        <div class="result-info">
+                            <h3>Book Title 1</h3>
+                            <p>Author: Author Name 1</p>
+                            <p>Genre: Fantasy</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="result-item">
+                        <img src="cover-image-2.jpg" alt="Book Cover">
+                        <button class="add-button">+</button>
+                        <div class="result-info">
+                            <h3>Book Title 2</h3>
+                            <p>Author: Author Name 2</p>
+                            <p>Genre: Science Fiction</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more book search results here -->
+            </ul>
+            <ul class="results-list" id="articles-results" style="display: none;">
+                <!-- Add articles search results here -->
+                <li>
+                    <div class="result-item">
+                        <img src="cover-image-2.jpg" alt="Book Cover">
+                        <button class="add-button">+</button>
+                        <div class="result-info">
+                            <h3>Book Title 2</h3>
+                            <p>Author: Author Name 2</p>
+                            <p>Genre: Science Fiction</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="results-list" id="papers-results" style="display: none;">
+                <li>
+                    <div class="result-item">
+                        <img src="cover-image-2.jpg" alt="Book Cover">
+                        <button class="add-button">+</button>
+                        <div class="result-info">
+                            <h3>Book Title 2</h3>
+                            <p>Author: Author Name 2</p>
+                            <p>Genre: Science Fiction</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add papers search results here -->
+
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+
+    <script>
+        // JavaScript for tab switching
+        const tabs = document.querySelectorAll('.tab');
+        const resultsLists = document.querySelectorAll('.results-list');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const tabName = tab.getAttribute('data-tab');
+                resultsLists.forEach(list => {
+                    list.style.display = 'none';
+                });
+                document.getElementById(`${tabName}-results`).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
