@@ -31,10 +31,7 @@ const BorrowedBooksPage = () => {
       </header>
 
       <section className="main-content" style={{ margin: '20px' }}>
-        <div className="search-bar" style={{ display: 'flex', alignItems: 'center' }}>
-          <input type="text" id="search-input" placeholder="Search" style={{ flex: '1', padding: '10px', border: '1px solid #ccc' }} />
-          <button id="search-button"><img src="search-icon.png" alt="Search" /></button>
-        </div>
+        
         <div className="search-results" style={{ backgroundColor: 'rgba(245, 245, 245, 0.9)', padding: '20px', borderRadius: '5px' }}>
           <div className="tab-bar" style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
             <div className={`tab ${activeTab === 'books' ? 'active' : ''}`} onClick={() => handleTabClick('books')} data-tab="books">Borrowed Books</div>
@@ -45,8 +42,7 @@ const BorrowedBooksPage = () => {
           <ul className="results-list" id="books-results" style={{ display: activeTab === 'books' ? 'block' : 'none', listStyle: 'none', padding: '0' }}>
             <li>
               <div className="result-item" style={{ margin: '10px 0', display: 'flex', alignItems: 'center', position: 'relative' }}>
-                <img src="cover-image-1.jpg" alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
-                <button className="add-button">+</button>
+                <img src={coverImage2} alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
                 <div className="result-info" style={{ flex: '1' }}>
                   <h3>Book Title 1</h3>
                   <p>Author: Author Name 1</p>
@@ -56,8 +52,7 @@ const BorrowedBooksPage = () => {
             </li>
             <li>
               <div className="result-item" style={{ margin: '10px 0', display: 'flex', alignItems: 'center', position: 'relative' }}>
-                <img src="cover-image-2.jpg" alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
-                <button className="add-button">+</button>
+                <img src={coverImage1} alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
                 <div className="result-info" style={{ flex: '1' }}>
                   <h3>Book Title 2</h3>
                   <p>Author: Author Name 2</p>
@@ -71,7 +66,6 @@ const BorrowedBooksPage = () => {
             <li>
               <div className="result-item" style={{ margin: '10px 0', display: 'flex', alignItems: 'center', position: 'relative' }}>
                 <img src={coverImage2} alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
-                <button className="add-button">+</button>
                 <div className="result-info" style={{ flex: '1' }}>
                   <h3>Book Title 2</h3>
                   <p>Author: Author Name 2</p>
@@ -85,8 +79,6 @@ const BorrowedBooksPage = () => {
             <li>
               <div className="result-item" style={{ margin: '10px 0', display: 'flex', alignItems: 'center', position: 'relative' }}>
               <img src={coverImage1} alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
-                
-                <button className="add-button">+</button>
                 <div className="result-info" style={{ flex: '1' }}>
                   <h3>Book Title 2</h3>
                   <p>Author: Author Name 2</p>

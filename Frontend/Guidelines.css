@@ -72,7 +72,11 @@ nav ul li a {
     color: #000000;
     animation: slideIn 0.7s ease-in-out;
 }
-
+.content {
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+}
 .hr_lines {
     animation: slideRight 0.5s ease-in;
 }

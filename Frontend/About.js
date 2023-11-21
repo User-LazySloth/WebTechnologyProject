@@ -17,16 +17,12 @@ const AboutUs = () => {
           </ul>
         </nav>
         <div className="actions">
-          <div className="search">
-            <input type="text" placeholder="Search" style={{ border: 'none', padding: '5px' }} />
-            <button style={{ backgroundColor: '#444', border: 'none', color: '#fff', padding: '5px 10px' }}><img src="search-icon.png" alt="Search" /></button>
-          </div>
           <button className="signup" style={{ backgroundColor: '#ff5722', border: 'none', color: '#fff', padding: '10px 20px', marginLeft: '10px', cursor: 'pointer' }}>Sign Up</button>
           <button className="signin" style={{ backgroundColor: '#ff5722', border: 'none', color: '#fff', padding: '10px 20px', marginLeft: '10px', cursor: 'pointer' }}>Sign In</button>
           <button><img src="ProfilePicIcon.png" alt="Profile" width="40" height="40" /></button>
         </div>
       </header>
-
+      <div className="content">
       <section className="main-content">
         <h1 className="about-heading" align="center" style={{ textAlign: 'center', fontSize: '36px', fontFamily: 'Arial, sans-serif', color: '#236b92', animation: 'slideIn 0.5s ease-in-out' }}>About Us</h1>
         <p className="about-content" style={{ textAlign: 'center', fontSize: '20px', color: '#000000', animation: 'slideIn 0.7s ease-out' }}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt illo molestias adipisci perspiciatis qui quasi facere obcaecati voluptates, sunt in non aspernatur tenetur consequuntur nobis id doloribus ut fuga!</p>
@@ -37,7 +33,7 @@ const AboutUs = () => {
         <h1 className="timings-heading" style={{ textAlign: 'center', fontSize: '36px', fontFamily: 'Arial, sans-serif', color: '#236b92', animation: 'slideIn 0.5s ease-in-out' }}>Library Timings</h1>
         <p className="timings-content" style={{ textAlign: 'center', fontSize: '20px', color: '#000000', animation: 'slideIn 0.7s ease-out' }}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt illo molestias adipisci perspiciatis qui quasi facere obcaecati voluptates, sunt in non aspernatur tenetur consequuntur nobis id doloribus ut fuga!</p>
       </section>
-
+      </div>
       <footer>
         {/* Footer content goes here */}
       </footer>
