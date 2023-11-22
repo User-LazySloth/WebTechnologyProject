@@ -4,7 +4,6 @@ import './Login.css';
 
 const Login = () => {
     return (
-    <div className="container">
       <div className="left-half">
         <fieldset>
           <h3 id="PLTag">PESU Library</h3>
@@ -31,11 +30,6 @@ const Login = () => {
           </form>
         </fieldset>
       </div>
-      <div className="right-half">
-        <h1>Some Image</h1>
-        <p>Best library ever.</p>
-      </div>
-    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import './Guidelines.css'
 const GuidelinesPage = () => {
   return (
     <div>
-      <header style={{ backgroundColor: '#333333', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px' }}>
+      {/* <header style={{ backgroundColor: '#333333', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px' }}>
         <div className="logo">
           <img src="logo.png" alt="Your Logo" style={{ maxHeight: '40px' }} />
         </div>
@@ -20,7 +20,7 @@ const GuidelinesPage = () => {
           <button className="signin" style={{ backgroundColor: '#ff5722', border: 'none', color: '#fff', padding: '10px 20px', marginLeft: '10px', cursor: 'pointer' }}>Sign In</button>
           <button><img src="ProfilePicIcon.png" alt="Profile" width="40" height="40" /></button>
         </div>
-      </header>
+      </header> */}
       <div className='content'>
       <section className="main-content">
         <h1 className="guidelines-heading" align="center" style={{ textAlign: 'center', fontSize: '36px', fontFamily: 'Arial, sans-serif', color: '#236b92', animation: 'slideIn 0.5s ease-in-out' }}>Guidelines</h1>

@@ -5,7 +5,7 @@ import './MyProfile.css'; // Import the external CSS file
 
 const MyProfile = () => {
   return (
-    <div>
+    <div className='ever'>
       {/* <header>
         <div className="logo">
           <img src="logo.png" alt="Your Logo" />

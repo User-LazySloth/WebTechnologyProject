@@ -4,11 +4,10 @@ import './ReservedBooks.css'; // Replace with the correct path to your external 
 import coverImage1 from './cover-image-1.jpg';
 import coverImage2 from './cover-image-2.jpg';
 
-// Functional component for the Reserved Books Page
 const ReservedBooksPage = () => {
   return (
-    <div>
-      <header>
+    <div className='ever'>
+      {/* <header>
         <div className="logo">
           <img src="logo.png" alt="Your Logo" />
         </div>
@@ -24,7 +23,7 @@ const ReservedBooksPage = () => {
           <button className="signin">Sign In</button>
           <button><img src="profilepic.png" alt="Profile" /></button>
         </div>
-      </header>
+      </header> */}
 
       <section className="main-content">
         <div className="search-results">

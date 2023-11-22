@@ -19,6 +19,9 @@ header {
 .logo img {
     max-height: 40px;
 }
+.ever {
+    width: 100%;
+  }
 nav ul {
     display: flex;
 }

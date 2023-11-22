@@ -11,8 +11,8 @@ const BorrowedBooksPage = () => {
   };
 
   return (
-    <div>
-      <header style={{ backgroundColor: '#333333', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px' }}>
+    <div className='ever'>
+      {/* <header style={{ backgroundColor: '#333333', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px' }}>
         <div className="logo">
           <img src="logo.png" alt="Your Logo" style={{ maxHeight: '40px' }} />
         </div>
@@ -28,7 +28,7 @@ const BorrowedBooksPage = () => {
           <button className="signin">Sign In</button>
           <button><img src="profilepic.png" alt="Profile" /></button>
         </div>
-      </header>
+      </header> */}
 
       <section className="main-content" style={{ margin: '20px' }}>
         
@@ -37,7 +37,6 @@ const BorrowedBooksPage = () => {
             <div className={`tab ${activeTab === 'books' ? 'active' : ''}`} onClick={() => handleTabClick('books')} data-tab="books">Borrowed Books</div>
             <div className={`tab ${activeTab === 'articles' ? 'active' : ''}`} onClick={() => handleTabClick('articles')} data-tab="articles">Overdue Books</div>
           </div>
-          {/* Sample search results */}
           <h2 style={{ textAlign: 'center' }}>Borrowed Books, Articles, and Pages</h2>
           <ul className="results-list" id="books-results" style={{ display: activeTab === 'books' ? 'block' : 'none', listStyle: 'none', padding: '0' }}>
             <li>
@@ -60,40 +59,12 @@ const BorrowedBooksPage = () => {
                 </div>
               </div>
             </li>
-            {/* Add more book search results here */}
-          </ul>
-          <ul className="results-list" id="articles-results" style={{ display: activeTab === 'articles' ? 'block' : 'none', listStyle: 'none', padding: '0' }}>
-            <li>
-              <div className="result-item" style={{ margin: '10px 0', display: 'flex', alignItems: 'center', position: 'relative' }}>
-                <img src={coverImage2} alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
-                <div className="result-info" style={{ flex: '1' }}>
-                  <h3>Book Title 2</h3>
-                  <p>Author: Author Name 2</p>
-                  <p>Genre: Science Fiction</p>
-                </div>
-              </div>
-            </li>
-            {/* Add articles search results here */}
-          </ul>
-          <ul className="results-list" id="papers-results" style={{ display: 'none', listStyle: 'none', padding: '0' }}>
-            <li>
-              <div className="result-item" style={{ margin: '10px 0', display: 'flex', alignItems: 'center', position: 'relative' }}>
-              <img src={coverImage1} alt="Book Cover" style={{ maxWidth: 'px', maxHeight: '180px', marginRight: '20px' }} />
-                <div className="result-info" style={{ flex: '1' }}>
-                  <h3>Book Title 2</h3>
-                  <p>Author: Author Name 2</p>
-                  <p>Genre: Science Fiction</p>
-                </div>
-              </div>
-            </li>
-            {/* Add papers search results here */}
+
           </ul>
         </div>
       </section>
 
-      <footer>
-        {/* Footer content goes here */}
-      </footer>
+      
     </div>
   );
 };

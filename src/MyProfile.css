@@ -13,7 +13,9 @@ header {
     align-items: center;
     padding: 10px 20px;
 }
-
+.ever {
+    width: 100%;
+  }
 .logo img {
     max-height: 40px;
 }
